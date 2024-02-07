@@ -5,28 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .container {
-            padding: 16px;
-        }
-
-        input[type=text], input[type=surname]{
-            width: 100;
-            padding: 15px;
-            margin: 5px 0 22px 0;
-            display: inline-block;
-            border: none;
-            background: #d1dad0;
-        } 
-        input[type=text]:focus, input[type=surname]:focus{
-            background-color: #ffcdcd;
-            outline: none;
-        }
-        hr {
-            border: 1px solid #f1f1f1;
-            margin-bottom: 25px;
-        }
         input{
-            background-color: #04aa6d;
+            margin: auto;
+            width: 50%;
+            border: 3px solid rgb(0, 0, 0);
+            padding: 10px;
+            text-emphasis-color:  rgba(9, 41, 219, 0.904);
+        }
+        body{
+            background-color: rgba(255, 217, 0, 0.322);
+        }
+        .group{
+            margin: auto;
+            width: 60%;
+        }
+        h2{
+            color: rgb(10, 6, 1);
+            position: relative;
+            left: px;
+        }
+       
+        /*.container {
+        //    padding: 16px;
+       //}
+
+        //input[type=text], input[type=surname]{
+         //   width: 100;
+        //    padding: 15px;
+         //   margin: 5px 0 22px 0;
+        //    display: inline-block;
+         //   border: none;
+         //   background: #d1dad0;
+       // } 
+        //input[type=text]:focus, input[type=surname]:focus{
+         //   background-color: #ffcdcd;
+       //     outline: none;
+        //}
+        ///hr {
+           /// border: 1px solid #f1f1f1;
+           /// margin-bottom: 25px;
+        
+        //input{
+          //  background-color: #d1e0db;
             color: white;
             padding: 16px 20px;
             margin: 8px 0;
@@ -34,15 +54,9 @@
             cursor: pointer;
             width: 100%;
             opacity: 0,9;
-        }
-        .registerbtn:hover{
-            opacity: 1;
-        }
-
-        .signin{
-            background-color: #f1f1f1;
-            text-align: center;
-        }
+            
+        }*/
+       
         
     </style>
 </head>
@@ -57,7 +71,7 @@
         <label for="name">Surname: </label><br>
         <input type="text" id="Surname" placeholder="Ievadi savu uzvadru"><br>
 
-        <label for="group">Group</label><br>
+        <label for="group">Group: </label><br>
         <select name="" id="group">
             <option value="DP2-1">DP2-1</option>
             <option value="DP2-2">DP2-2</option>
@@ -65,7 +79,7 @@
             <option value="DP2-4">DP2-4</option>
         </select><br>
         
-        <input type="submit" value="Reģistrēties">
+        <input type="submit" value="Reģistrēties"><br>
                 
         
 </body>
