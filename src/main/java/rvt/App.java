@@ -32,5 +32,6 @@ public class App {
         int index = indexOfSmallest.FindindexofSmallest(array);
         System.out.println("Index of smallest number: " + index);
     }
+    
 }
 
