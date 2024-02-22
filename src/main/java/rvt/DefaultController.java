@@ -15,7 +15,8 @@ import org.springframework.web.servlet.ModelAndView;
 import com.fasterxml.jackson.annotation.JsonCreator.Mode;
 
 import ch.qos.logback.core.model.Model;
-import javax.validation.Valid;
+import jakarta.servlet.http.HttpServletRequest;
+
 
 @Controller
 public class DefaultController {
@@ -50,19 +51,20 @@ public class DefaultController {
         return modelAndView;
     }
     @GetMapping(value = "/registration")
-    public ModelAndView RegistartionPage(){
-        ModelAndView modelAndView = new ModelAndView("registration");
-        return modelAndView;    
+    public String register(HttpServletRequest request, ModelAndView model){
+        model.addObject("student", new Student(null, null, null, null));
+        if(request.getParameter("success") != null){
+            return "registration-success";
+        }
+        return "registration";  
     }
 
     @PostMapping(value = "/registration")
-    public String registration(
-        @Valid @ModelAttribute("sudent") Student student,
-        BindingResult bindingResult
-    ) {
+    public String register(@Valid @ModelAttribute("student") Student student, BindingResult bindingResult){
         if (bindingResult.hasErrors()){
             return "registration/registration-page";
         }
+        System.out.println(student);
         return "redirect:/register?succcess";
     }
     //@GetMapping(value = "/")

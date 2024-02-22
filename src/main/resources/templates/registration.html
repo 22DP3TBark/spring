@@ -65,8 +65,26 @@
             width: 100%;
             border-radius: 59px;
         }
+        .container .logreg-box{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: calc(100% - 58%);
+            height: 100%;
+        }
+        .logreg-box input[type=submit]{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            backdrop-filter: blur(20px);
+        }
         
     </style>
+    <script>
+    </script>
 </head>
 <body>
     <h2>Registration</h2> 
@@ -90,8 +108,22 @@
         <label for="date">Enter the date: </label><br>
         <input type="date" name="begin" placeholder="dd-mm-yyyy" id="date" value="" min="1950-01-01" max="2030-12-31"><br>
         
+        
         <input type="submit" value="Reģistrēties">
-                
+        <script>
+        window.onload = function() {
+            var form = document.getElementById('registrationForm');
+            form.onsubmit = function(e) {
+                e.preventDefault();
+                // You can put your registration logic here
+
+                // After registration is successful, redirect to a new page
+                window.location.href = 'thankyou.html';
+            }
+        }
+        </script>
+        
+    </form>               
         
 </body>
 </html> 
